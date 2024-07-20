@@ -5,6 +5,8 @@ require('dotenv').config()
 const sessionFolderPath = process.env.SESSIONS_PATH || './sessions'
 const enableLocalCallbackExample = (process.env.ENABLE_LOCAL_CALLBACK_EXAMPLE || '').toLowerCase() === 'true'
 const globalApiKey = process.env.API_KEY
+const webhookAppId = process.env.WEBHOOK_B4A_APP_ID
+const webhookClientId = process.env.WEBHOOK_B4A_CLIENT_KEY
 const baseWebhookURL = process.env.BASE_WEBHOOK_URL
 const maxAttachmentSize = parseInt(process.env.MAX_ATTACHMENT_SIZE) || 10000000
 const setMessagesAsSeen = (process.env.SET_MESSAGES_AS_SEEN || '').toLowerCase() === 'true'
@@ -20,6 +22,8 @@ module.exports = {
   sessionFolderPath,
   enableLocalCallbackExample,
   globalApiKey,
+  webhookAppId,
+  webhookClientId,
   baseWebhookURL,
   maxAttachmentSize,
   setMessagesAsSeen,

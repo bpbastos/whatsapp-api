@@ -5,7 +5,7 @@ services:
     # image: chrishubert/whatsapp-web-api:latest # Pull the image from Docker Hub
     restart: always
     ports:
-      - ${PORT}:3000
+      - ${PORT}:${PORT}
     environment:
       ## Application ##    
       - PORT=${PORT}

@@ -7,7 +7,8 @@ const triggerWebhook = (webhookURL, sessionId, dataType, data) => {
     headers: { 
       'Content-Type': 'application/json',
       'X-Parse-Application-Id': webhookAppId,
-      'X-Parse-client-key': webhookClientId,
+      //'X-Parse-client-key': webhookClientId,
+      'X-Parse-Master-Key': webhookClientId,
       //'x-api-key': globalApiKey
     } })
     .catch(error => console.error('Failed to send new message webhook:', sessionId, dataType, error.message, data || ''))
